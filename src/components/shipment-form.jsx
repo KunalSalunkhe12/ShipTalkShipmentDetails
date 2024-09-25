@@ -43,9 +43,9 @@ export function ShipmentForm({ onSubmit }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Card className="w-full max-w-4xl mx-auto bg-[#242933] text-white">
+      <Card className="w-full max-w-4xl mx-auto bg-[#252A34] text-white">
         <CardHeader>
-          <CardTitle className="text-2xl font-bold text-center">
+          <CardTitle className="text-2xl font-bold text-center text-white">
             Enter Shipment Details
           </CardTitle>
         </CardHeader>
@@ -53,7 +53,7 @@ export function ShipmentForm({ onSubmit }) {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="block text-sm font-medium">
+                <label className="block text-sm font-medium text-white">
                   Country of Origin
                 </label>
                 <Select
@@ -62,10 +62,10 @@ export function ShipmentForm({ onSubmit }) {
                     handleSelectChange("originCountry", value)
                   }
                 >
-                  <SelectTrigger className="bg-[#2e3440] text-white">
+                  <SelectTrigger className="bg-[#1C1F26] text-white">
                     <SelectValue placeholder="Select country" />
                   </SelectTrigger>
-                  <SelectContent className="bg-[#2e3440] text-white">
+                  <SelectContent className="bg-[#1C1F26] text-white">
                     <SelectItem value="china">China</SelectItem>
                     <SelectItem value="india">India</SelectItem>
                     <SelectItem value="vietnam">Vietnam</SelectItem>
@@ -74,7 +74,7 @@ export function ShipmentForm({ onSubmit }) {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium">
+                <label className="block text-sm font-medium text-white">
                   Product Description or HS Code
                 </label>
                 <Input
@@ -82,24 +82,26 @@ export function ShipmentForm({ onSubmit }) {
                   placeholder="e.g., Electronics, Clothing, 8517.12.00"
                   value={formData.productDescription}
                   onChange={handleChange}
-                  className="bg-[#2e3440] text-white"
+                  className="bg-[#1C1F26] text-white"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium">Weight (kg)</label>
+                <label className="block text-sm font-medium text-white">
+                  Weight (kg)
+                </label>
                 <Input
                   name="weight"
                   type="number"
                   placeholder="Enter weight"
                   value={formData.weight}
                   onChange={handleChange}
-                  className="bg-[#2e3440] text-white"
+                  className="bg-[#1C1F26] text-white"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium">
+                <label className="block text-sm font-medium text-white">
                   Dimensions (LxWxH cm)
                 </label>
                 <Input
@@ -107,12 +109,12 @@ export function ShipmentForm({ onSubmit }) {
                   placeholder="e.g., 30x20x15"
                   value={formData.dimensions}
                   onChange={handleChange}
-                  className="bg-[#2e3440] text-white"
+                  className="bg-[#1C1F26] text-white"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium">
+                <label className="block text-sm font-medium text-white">
                   Shipping Method
                 </label>
                 <Select
@@ -121,10 +123,10 @@ export function ShipmentForm({ onSubmit }) {
                     handleSelectChange("shippingMethod", value)
                   }
                 >
-                  <SelectTrigger className="bg-[#2e3440] text-white">
+                  <SelectTrigger className="bg-[#1C1F26] text-white">
                     <SelectValue placeholder="Select method" />
                   </SelectTrigger>
-                  <SelectContent className="bg-[#2e3440] text-white">
+                  <SelectContent className="bg-[#1C1F26] text-white">
                     <SelectItem value="air">Air</SelectItem>
                     <SelectItem value="sea">Sea</SelectItem>
                     <SelectItem value="express">Express</SelectItem>
@@ -133,7 +135,7 @@ export function ShipmentForm({ onSubmit }) {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium">
+                <label className="block text-sm font-medium text-white">
                   U.S. Destination
                 </label>
                 <Input
@@ -141,12 +143,12 @@ export function ShipmentForm({ onSubmit }) {
                   placeholder="Zip Code or City"
                   value={formData.destination}
                   onChange={handleChange}
-                  className="bg-[#2e3440] text-white"
+                  className="bg-[#1C1F26] text-white"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium">
+                <label className="block text-sm font-medium text-white">
                   Shipment Value (USD)
                 </label>
                 <Input
@@ -155,7 +157,7 @@ export function ShipmentForm({ onSubmit }) {
                   placeholder="Enter value"
                   value={formData.value}
                   onChange={handleChange}
-                  className="bg-[#2e3440] text-white"
+                  className="bg-[#1C1F26] text-white"
                 />
               </div>
             </div>
@@ -163,7 +165,7 @@ export function ShipmentForm({ onSubmit }) {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 type="submit"
-                className="w-full bg-[#7e6be8] hover:bg-[#6a5ad4] text-white font-bold py-3 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1"
+                className="w-full bg-[#FFD700] hover:bg-[#FFC700] text-black font-bold py-3 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1"
               >
                 Calculate Shipping Cost
               </Button>
@@ -174,25 +176,25 @@ export function ShipmentForm({ onSubmit }) {
 
       <div className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-4">
         <InfoCard
-          icon={<Package className="w-8 h-8 text-[#7e6be8]" />}
+          icon={<Package className="w-8 h-8 text-[#FFD700]" />}
           title="Package Details"
           description="Accurate dimensions ensure precise quotes"
         />
 
         <InfoCard
-          icon={<Truck className="w-8 h-8 text-[#7e6be8]" />}
+          icon={<Truck className="w-8 h-8 text-[#FFD700]" />}
           title="Shipping Method"
           description="Choose the best option for your timeline"
         />
 
         <InfoCard
-          icon={<DollarSign className="w-8 h-8 text-[#7e6be8]" />}
+          icon={<DollarSign className="w-8 h-8 text-[#FFD700]" />}
           title="Declared Value"
           description="Affects customs duties and insurance"
         />
 
         <InfoCard
-          icon={<MapPin className="w-8 h-8 text-[#7e6be8]" />}
+          icon={<MapPin className="w-8 h-8 text-[#FFD700]" />}
           title="Destination"
           description="Impacts shipping time and cost"
         />
@@ -205,7 +207,7 @@ function InfoCard({ icon, title, description }) {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
-      className="bg-[#242933] p-4 rounded-lg shadow-md"
+      className="bg-[#252A34] p-4 rounded-lg shadow-md"
     >
       <div className="flex items-center mb-2">
         {icon}

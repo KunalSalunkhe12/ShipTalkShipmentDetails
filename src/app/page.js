@@ -1,3 +1,4 @@
+"use client"
 import ShippingCostPredictor from '@/components/ShippingCostPredictor'
 import React from 'react'
 
@@ -7,4 +8,4 @@ const page = () => {
   )
 }
 
-export default page
+export default page;
