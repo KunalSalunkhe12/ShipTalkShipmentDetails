@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
           <header className="bg-[#242933] shadow">
             <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
               <h1 className="text-3xl font-bold text-center flex-grow">
-                ShipTalk
+                Multivendor Orchestration
               </h1>
               {/* {children} */}
             </div>
