@@ -42,7 +42,7 @@ export function ResultsDashboard({ results, shipmentDetails }) {
     { name: "Other Fees", value: results.otherFees },
   ];
 
-  const COLORS = ["#FFD700", "#FFA500", "#FF6347"];
+  const COLORS = ["#4299E1", "#FFA500", "#FF6347"];
 
   const timelineData = [
     { name: "Origin", time: 0 },
@@ -155,7 +155,7 @@ export function ResultsDashboard({ results, shipmentDetails }) {
                     <Line
                       type="monotone"
                       dataKey="time"
-                      stroke="#FFD700"
+                      stroke="#4299E1"
                       activeDot={{ r: 8 }}
                     />
                   </LineChart>
@@ -164,17 +164,17 @@ export function ResultsDashboard({ results, shipmentDetails }) {
                   <h3 className="font-semibold text-white">Shipment Details</h3>
                   <div className="space-y-2 mt-2 text-white">
                     <div className="flex items-center">
-                      <Truck className="mr-2 h-4 w-4 text-[#FFD700]" />
+                      <Truck className="mr-2 h-4 w-4 text-[#4299E1]" />
 
                       <span>From: {shipmentDetails.originCountry}</span>
                     </div>
                     <div className="flex items-center">
-                      <DollarSign className="mr-2 h-4 w-4 text-[#FFD700]" />
+                      <DollarSign className="mr-2 h-4 w-4 text-[#4299E1]" />
 
                       <span>Value: ${shipmentDetails.value}</span>
                     </div>
                     <div className="flex items-center">
-                      <Clock className="mr-2 h-4 w-4 text-[#FFD700]" />
+                      <Clock className="mr-2 h-4 w-4 text-[#4299E1]" />
 
                       <span>Estimated Delivery: {results.deliveryTime}</span>
                     </div>
@@ -205,7 +205,7 @@ export function ResultsDashboard({ results, shipmentDetails }) {
                   />
 
                   <Legend />
-                  <Bar dataKey="air" fill="#FFD700" />
+                  <Bar dataKey="air" fill="#4299E1" />
                   <Bar dataKey="sea" fill="#FFA500" />
                   <Bar dataKey="express" fill="#FF6347" />
                 </BarChart>
@@ -238,7 +238,7 @@ export function ResultsDashboard({ results, shipmentDetails }) {
                       }
                     >
                       {insight.type === "optimization" && (
-                        <TrendingUp className="mr-2 h-5 w-5 text-[#FFD700] mt-0.5" />
+                        <TrendingUp className="mr-2 h-5 w-5 text-[#4299E1] mt-0.5" />
                       )}
 
                       {insight.type === "warning" && (
@@ -323,7 +323,7 @@ export function ResultsDashboard({ results, shipmentDetails }) {
           </Card>
 
           <div className="mt-6 text-center">
-            <Button className="bg-[#FFD700] hover:bg-[#FFC700] text-black font-bold py-2 px-4 rounded">
+            <Button className="bg-[#4299E1] hover:bg-[#FFC700] text-black font-bold py-2 px-4 rounded">
               Download Detailed Report
             </Button>
           </div>

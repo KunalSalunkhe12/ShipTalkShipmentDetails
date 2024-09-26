@@ -165,7 +165,7 @@ export function ShipmentForm({ onSubmit }) {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 type="submit"
-                className="w-full bg-[#FFD700] hover:bg-[#FFC700] text-black font-bold py-3 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1"
+                className="w-full bg-[#4299E1] hover:bg-[#4299E1] text-black font-bold py-3 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1"
               >
                 Calculate Shipping Cost
               </Button>
@@ -176,25 +176,25 @@ export function ShipmentForm({ onSubmit }) {
 
       <div className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-4">
         <InfoCard
-          icon={<Package className="w-8 h-8 text-[#FFD700]" />}
+          icon={<Package className="w-8 h-8 text-[#4299E1]" />}
           title="Package Details"
           description="Accurate dimensions ensure precise quotes"
         />
 
         <InfoCard
-          icon={<Truck className="w-8 h-8 text-[#FFD700]" />}
+          icon={<Truck className="w-8 h-8 text-[#4299E1]" />}
           title="Shipping Method"
           description="Choose the best option for your timeline"
         />
 
         <InfoCard
-          icon={<DollarSign className="w-8 h-8 text-[#FFD700]" />}
+          icon={<DollarSign className="w-8 h-8 text-[#4299E1]" />}
           title="Declared Value"
           description="Affects customs duties and insurance"
         />
 
         <InfoCard
-          icon={<MapPin className="w-8 h-8 text-[#FFD700]" />}
+          icon={<MapPin className="w-8 h-8 text-[#4299E1]" />}
           title="Destination"
           description="Impacts shipping time and cost"
         />
